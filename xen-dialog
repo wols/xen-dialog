@@ -1,0 +1,34 @@
+#!/bin/bash
+#
+# xen-dialog (C) 2018 WOLfgang Schricker <git@wols.org>
+#
+_VERSION="0.0.20180226"
+
+# env
+
+_DIALOG_C=$(command -v dialog)
+_DIALOG_X=$(command -v Xdialog)
+
+if [[ -z "$DISPLAY" ]]; then
+    _DIALOG=$_DIALOG_C
+else
+    _DIALOG=$_DIALOG_X
+fi
+
+_D_TITLE=${0##*/}
+
+# functions
+
+function _d_help {
+    local _d_text="
+${_D_TITLE} ${_VERSION} (C) 2018 WOLfgang Schricker
+"
+
+    $_DIALOG --clear --title " ${_D_TITLE} - Help " --msgbox "$_d_text" 10 80
+}
+
+# main
+
+_d_help
+
+# EOF
