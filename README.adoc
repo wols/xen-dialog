@@ -2,6 +2,10 @@
 :image-captions:
 :linkattrs:
 
-
+A dialog to group, start and stop some Xen domU.
 
 image:https://img.shields.io/github/license/wols/xen-dialog.svg[license, link="LICENSE"]
+
+== Sources
+
+* link:https://linuxgazette.net/101/sunil.html[Sunil Thomas Thonikuzhiyil: Designing Simple front ends with dialog/Xdialog, window="_blank"]
